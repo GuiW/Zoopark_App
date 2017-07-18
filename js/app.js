@@ -10,17 +10,17 @@ $(function(){
 
         requetes : [
           {
-            link : 'http://localhost:7883/ingrwf05/ingrwf05_ei/zoopark/wp-json/wp/v2/animal',
+            link : 'https://killer-cepegra.xyz/skills3/Zoopark//wp-json/wp/v2/animal',
             key : "animaux",
             dataLocation : "listingAnimals"
           },
           {
-            link : 'http://localhost:8888/ingrwf05/ingrwf05_ei/zoopark/wp-json/wp/v2/pages/85',
+            link : 'https://killer-cepegra.xyz/skills3/Zoopark//wp-json/wp/v2/pages/85',
             key : "map",
             dataLocation : "dataMap"
           },
           {
-            link : 'http://localhost:8888/ingrwf05/ingrwf05_ei/zoopark/wp-json/wp/v2/posts?categories=4',
+            link : 'https://killer-cepegra.xyz/skills3/Zoopark//wp-json/wp/v2/posts?categories=4',
             key : "activites",
             dataLocation : "listingActivites"
           }
@@ -28,7 +28,7 @@ $(function(){
 
         listingAnimals: [],
         listingActivites: [],
-        dataMap: {},
+        dataMap: null,
         errorMsg: ""
       },
       mounted: function() {
@@ -55,8 +55,8 @@ $(function(){
               function(error) {
                   console.log(error);
                 //On check si le localstorage est vide ou pas
-                if (localStorage.requete.key) {
-                  self.synchronisation();
+                if (localStorage.getItem(requete.key)) {
+                  self.synchronisation(requete.dataLocation, requete.key);
                 }
                 else {
                   self.errorMsg = "Désolé, vous devez être connecté à internet pour charger le contenu de cette page"
