@@ -59,8 +59,6 @@ function Geolocalisation() {
 
 function successGeo(pos) {
   crd = pos.coords;
-  console.log("Latitude : "+crd.latitude)
-  console.log("Longitude : "+crd.longitude)
   posLong = crd.longitude;
   posLat = crd.latitude;
 

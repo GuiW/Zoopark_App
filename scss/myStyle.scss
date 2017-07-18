@@ -1,0 +1,21 @@
+/* STICKY FOOTER */
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* CONTENT */
+.mycontent {
+  margin-top : 20px;
+}
+
+/* Error */
+.error {
+  margin-top : 40px;
+  font-size : 1.5rem;
+}

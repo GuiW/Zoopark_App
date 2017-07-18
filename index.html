@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Zoopark</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <link href="css/styles.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/myStyle.css">
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
+<div id="app">
   <header>
     <!-- Recherche -->
-    <nav class=" ">
+    <!--<nav class=" ">
       <div class="search-bar nav-wrapper lighten-1 container">
         <form>
           <div class="input-field">
@@ -22,7 +28,7 @@
           </div>
         </form>
       </div>
-    </nav>
+    </nav>-->
 
     <div class="row">
       <div class="col s12 center"><img src="img/ZOOPARK-01.svg" alt="logo"></div>
@@ -34,23 +40,42 @@
     <div class="row">
     <!-- Navigation -->
       <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a href="#test1">Test 1</a></li>
-          <li class="tab col s3"><a href="#test2">Test 2</a></li>
-          <li class="tab col s3"><a href="#test3">Test 4</a></li>
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#animals">Animaux</a></li>
+          <li class="tab col s3"><a href="#map">Carte</a></li>
+          <li class="tab col s3"><a href="#events">Evenements</a></li>
         </ul>
       </div>
 
     <!-- Animaux -->
-      <div id="test1" class="col s12">
-        Test 1
+      <div id="animals" class="mycontent col s12">
+        <div v-if="listingAnimals.length > 0" class="row">
+          <div v-for="animal in listingAnimals" class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <img :src="animal.acf.imgAnimal_fld.url" :alt="animal.acf.imgAnimal_fld.alt">
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{ animal.title.rendered }}</span>
+                <p v-html="animal.excerpt.rendered"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row center error" v-else>{{ errorMsg }}</div>
       </div>
 
     <!-- Carte -->
-      <div id="test2" class="col s12">Test 2</div>
+      <div id="map" class="mycontent col s12">
+        <div v-if="dataMap" class="row">
+          <div id="mapCont" class="col s12">
+            <img :src="dataMap.acf.map_fld" alt="Carte du zoo">
+          </div>
+        </div>
+      </div>
 
     <!-- Evenements -->
-      <div id="test3" class="col s12">Test 3</div>
+      <div id="events" class="mycontent col s12">Test 3</div>
     </div>
   </main>
 
@@ -62,7 +87,7 @@
           <div class="col s12 center">
             <h3 class="brown-text">Adresse</h3>
             <p>
-              <h4><em>Gosselies</em> <img src="img/ZOOPARK-03.svg" alt="logo"></h4>
+              <h4><em>Gosselies</em> <img src="img/ZOOPARK-01.svg" alt="logo"></h4>
               <span itemprop="streetAddress">Rue Stranard -</span>
               <span itemprop="addressLocality">6041 Gosselies -</span>
               (<span itemprop="addressRegion">Belgique</span>- BE)
@@ -78,10 +103,12 @@
       </div>
     </div>
   </footer>
+</div>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>
