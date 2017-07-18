@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Zoopark</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/styles.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class=" ">
+    <div class="search-bar nav-wrapper lighten-1 container">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <nav class="white nav-princip" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><h1 class="brand">ZooPark/<em>adventure</em></h1></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Horaires <span>été 2016</span></a></li>
+        <li><a href="mapzoo.html">Ou suis-je ? <span>plan du parc</span></a></li>
+        <li><a href="#">Les animaux </a></li>
+        <li><a href="contact.html">Contact <span>réservation</span></a></li>
+        <li><a href="#" class="material-icons">search</a><li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Horaires</a></li>
+        <li><a href="#">Ou suis-je ? </a></li>
+        <li><a href="#">Les animaux </a></li>
+        <li><a href="#">Infos pratiques </a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="ask section">
+    <div class="container">
+      <div class="row">
+        <div class="header-forms col s12 center white-text">
+          <i class="material-icons">Contenu</i>
+          <h3>
+            Titre de la page.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h2>blabla</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas fugiat eveniet commodi non, natus, laudantium ratione ipsam in molestiae ut vel! Illum laborum vel deserunt, voluptas, modi quis recusandae reiciendis.</p>
+    </div>
+  </div>
+  
+
+  <footer class="page-footer brown lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 m6 s12">
+          <h3 class="white-text">Spectacles</h3>
+          <ul class="footer-links">
+            <li><a href="#!">Volières aux perroquets</a></li>
+            <li><a href="#!">L'envol des Quetzals</a></li>
+            <li><a href="#!">La parade acrobatique des singes</a></li>
+            <li><a href="#!">Ballet aquatique des otaries</a></li>
+          </ul>
+        </div>
+        <div class="col l3 m6 s12">
+          <h3 class="white-text">Activités</h3>
+          <ul class="footer-links">
+            <li><a href="#!">Visites des jardins</a></li>
+            <li><a href="#!">Le parcours dans les arbres</a></li>
+            <li><a href="#!">Balades sous les serres</a></li>
+            <li><a href="#!">Trekking Adventure</a></li>
+          </ul>
+        </div>
+        <div class="gmap col l6 m12 s12">
+          map google
+        </div>
+      </div>
+    </div>
+    <div class="section white">
+      <div class="access-map container">
+        <div class="row">
+          <div class="col s12 center">
+            <h3 class="brown-text">Adresse</h3>
+            <p>
+              <h4><em>Gosselies</em> <img src="img/ZOOPARK-03.svg" alt="logo"></h4>
+              <span itemprop="streetAddress">Rue Stranard -</span>
+              <span itemprop="addressLocality">6041 Gosselies -</span>
+              (<span itemprop="addressRegion">Belgique</span>- BE)
+            </p>
+            <p>E411, sortie 25 direction Bouillon sur N89, sortie km 4,7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section version grey darken-3">
+      <div class="row">
+        <div class="col s6 center">
+          <a class="waves-effect text waves-orange btn-flat">Français</a>
+        </div>
+        <div class="col s6 center">
+          <a class="waves-effect waves-orange btn-flat">English</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center grey darken-4">
+      <div class="container">
+        ZooPark <a class="brown-text text-lighten-3" href="#">2016</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  </script>
+</body>
+</html>

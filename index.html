@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Zoopark</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/styles.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/myStyle.css">
+</head>
+<body>
+
+  <header>
+    <!-- Recherche -->
+    <nav class=" ">
+      <div class="search-bar nav-wrapper lighten-1 container">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s12 center"><img src="img/ZOOPARK-01.svg" alt="logo"></div>
+    </div>
+  </header>
+
+  <main>
+    <!--Tabs -->
+    <div class="row">
+    <!-- Navigation -->
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#test1">Test 1</a></li>
+          <li class="tab col s3"><a href="#test2">Test 2</a></li>
+          <li class="tab col s3"><a href="#test3">Test 4</a></li>
+        </ul>
+      </div>
+
+    <!-- Animaux -->
+      <div id="test1" class="col s12">
+        Test 1
+      </div>
+
+    <!-- Carte -->
+      <div id="test2" class="col s12">Test 2</div>
+
+    <!-- Evenements -->
+      <div id="test3" class="col s12">Test 3</div>
+    </div>
+  </main>
+
+
+  <footer class="page-footer lighten-1">
+    <div class="section white">
+      <div class="access-map container">
+        <div class="row">
+          <div class="col s12 center">
+            <h3 class="brown-text">Adresse</h3>
+            <p>
+              <h4><em>Gosselies</em> <img src="img/ZOOPARK-03.svg" alt="logo"></h4>
+              <span itemprop="streetAddress">Rue Stranard -</span>
+              <span itemprop="addressLocality">6041 Gosselies -</span>
+              (<span itemprop="addressRegion">Belgique</span>- BE)
+            </p>
+            <p>E411, sortie 25 direction Bouillon sur N89, sortie km 4,7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center grey darken-4">
+      <div class="container">
+        ZooPark <a class="brown-text text-lighten-3" href="#">2016</a>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+</html>
