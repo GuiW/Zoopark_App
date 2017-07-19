@@ -1,39 +1,23 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
+    //ANIMAUX PANELS
+    $("#animals").on('click', '.reveal-content', function() {
+      var othersPanels = $(".reveal-content").not(this);
 
-    //Smooth scroll
-    var $root = $('html, body');
-    $('#menu-item-75 a').click(function() {
-        the_id = $(this).attr("href");
-        $root.animate({
-          scrollTop: $(the_id).offset().top
-        }, 'slow');
-        return false;
-    });
+      //Fermer les autres panneaux
+      othersPanels.removeClass("active");
+      othersPanels.find('.card-arrow').text('keyboard_arrow_down');
 
+      $(this).toggleClass('active');
 
-    //Toggle telephone
-    $('#test5').on('change', function() {
-      var tel = $('#icon_telephone');
-      var telSib = $('#icon_telephone').siblings();
-      var isDisabled = tel.prop('disabled');
-
-      if(isDisabled) {
-        tel.prop('disabled', false);
-        tel.val("");
-        telSib.removeClass("active");
+      if($(this).hasClass('active')) {
+        $(this).find('.card-arrow').text('keyboard_arrow_up');
       }
       else {
-        tel.prop('disabled', true);
-        tel.val("I am not editable")
-        telSib.addClass("active");
-        tel.removeClass("valid");
+        $(this).find('.card-arrow').text('keyboard_arrow_down');
       }
     })
-
 
 /******************************************************************************/
 /**************************** GEOLOCALISATION *********************************/
